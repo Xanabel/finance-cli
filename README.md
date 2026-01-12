@@ -36,7 +36,6 @@
 
 ## Запуск из терминала (Windows / Linux / macOS)
 1) Собрать jar:
-```bash
 mvn -q package
 
 2) Запустить приложение:
@@ -119,7 +118,6 @@ exit
 Workflow: `.github/workflows/tests.yml`
 
 ### Запуск тестов через Maven (если Maven доступен в системе)
-```bash
 mvn test
 
 
