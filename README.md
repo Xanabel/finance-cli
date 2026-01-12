@@ -16,15 +16,15 @@
 - Java 17
 - Maven
 - Jackson (JSON) + jackson-datatype-jsr310 (даты)
-- WalletServiceTest — покрывает добавление операций, бюджеты, подсчёты, отчёты, ошибки ввода
-- TransferServiceTest — покрывает переводы и валидацию
+- JUnit 5
+- GitHub Actions (автопрогон тестов)
 
 ## Структура проекта (кратко)
 - `src/main/java` — код приложения
 - `src/test/java` — тесты (JUnit)
 - `data/` — данные пользователей и кошельков (создаётся автоматически)
-    - `data/users.json` — список пользователей
-    - `data/wallet-<login>.json` или аналогично (в зависимости от реализации `JsonWalletStorage`)
+  - `data/users.json` — список пользователей
+  - файлы кошельков в `data/` (формат зависит от реализации `JsonWalletStorage`)
 
 ## Запуск приложения (IntelliJ IDEA)
 1. Открой проект в IntelliJ.
@@ -34,6 +34,13 @@
 
 После запуска появится приглашение: "Finance CLI запущен. Введите 'help' для списка команд.".
 
+## Запуск из терминала (Windows / Linux / macOS)
+1) Собрать jar:
+```bash
+mvn -q package
+
+2) Запустить приложение:
+java -jar target/finance-cli-1.0.0.jar
 
 ## Команды CLI
 
@@ -74,7 +81,7 @@
 - `exit` — сохранить данные и выйти
 
 ## Пример сценария
-register xana 123
+register xana 123 
 login den 456
 add-category Еда
 add-category Зарплата
@@ -114,4 +121,5 @@ Workflow: `.github/workflows/tests.yml`
 ### Запуск тестов через Maven (если Maven доступен в системе)
 ```bash
 mvn test
+
 
