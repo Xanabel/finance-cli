@@ -80,18 +80,19 @@ java -jar target/finance-cli-1.0.0.jar
 - `exit` — сохранить данные и выйти
 
 ## Пример сценария
-register xana 123 
-login den 456
-add-category Еда
-add-category Зарплата
-set-budget Еда 4000
-add-expense Еда 500 обед
-add-income Зарплата 30000
-list-categories
-list-budgets
-stats
-export-stats data/report.txt
-exit
+```md
+- register xana 123 
+- login den 456
+- add-category Еда
+- add-category Зарплата
+- set-budget Еда 4000
+- add-expense Еда 500 обед
+- add-income Зарплата 30000
+- list-categories
+- list-budgets
+- stats
+- export-stats data/report.txt
+- exit
 
 ## Оповещения
 Приложение предупреждает если:
