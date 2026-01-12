@@ -93,6 +93,7 @@ java -jar target/finance-cli-1.0.0.jar
 - stats
 - export-stats data/report.txt
 - exit
+...
 
 ## Оповещения
 Приложение предупреждает если:
